@@ -33,8 +33,8 @@ file:
  "%{hiera('homedirs::path')}":
   ensure: directory
   
-  # NOTE: "myUser" lives in Active Directory
-"%{hiera('homedirs::path')}/myUser":
+ # NOTE: "myUser" lives in Active Directory
+ "%{hiera('homedirs::path')}/myUser":
   ensure: directory
   recurse: true
   replace: false
