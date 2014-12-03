@@ -1,8 +1,8 @@
 #!/bin/bash
 
-OWN_DOMAIN="$(wbinfo --own-domain)"
+if [ "$(which wbinfo)" ]; then
 
-if [ "$OWN_DOMAIN" ]; then
+ OWN_DOMAIN="$(wbinfo --own-domain)"
 
  find "/home/$OWN_DOMAIN/" -mindepth 1 -maxdepth 1 -type d | while read directory;
  do
