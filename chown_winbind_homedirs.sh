@@ -4,6 +4,7 @@ if [ "$(which wbinfo)" ]; then
 
  OWN_DOMAIN="$(wbinfo --own-domain)"
 
+ chmod 770 "/home/$OWN_DOMAIN/*"
  find "/home/$OWN_DOMAIN/" -mindepth 1 -maxdepth 1 -type d | while read directory;
  do
   USER="$(basename $directory)"
